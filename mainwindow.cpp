@@ -46,6 +46,8 @@ void MainWindow::openUrl(const QString &url)
 
 void MainWindow::testJson(QByteArray data)
 {
+
+    //URL: http://date.jsontest.com/
     QJsonDocument doc = QJsonDocument::fromJson(data);
     QJsonObject obj = doc.object();
 
@@ -62,7 +64,8 @@ void MainWindow::testJson(QByteArray data)
     qDebug() << "time: ";
     qDebug() << time;
 
-//    ui->label->setText(date);
+    ui->label_2->setText(date);
+    ui->label_3->setText(time);
 
 
 }
